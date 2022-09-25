@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://code.jquery.com/jquery-3.6.1.js"
+            integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+            crossorigin="anonymous"
+        ></script>
+        <link rel="stylesheet" href="./css/main.css" />
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#form").submit(function (event) {
+                    event.preventDefault();
+
+                    $.ajax({
+                        type: "POST",
+                        url: "/login",
+                        data: $("#form").serialize(),
+                        dataType: "json",
+                        success: function (response) {
+                            $("#form")[0].reset();
+
+                            document.getElementById("check").innerHTML =
+                                response.Success;
+                            //ADD THIS CODE
+                            setTimeout(function () {
+                                document.getElementById("check").innerHTML = "";
+                            }, 3000);
+                            if (response.Success == "Success!") {
+                                document.getElementById("aa").click();
+                            }
+                        },
+                        error: function () {},
+                    });
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 class="text-center mt-5 mb-5">Authentication App Group 11</h1>
+
+        <div class="d-flex flex-row justify-content-around flex-wrap pt-5">
+            <div class="left-side">
+                <img
+                    class="img-fluid float-left"
+                    src="https://cdn-icons-png.flaticon.com/512/1791/1791961.png"
+                    alt="img"
+                    height="400px"
+                    width="400px"
+                />
+            </div>
+            <div class="form-group">
+                <h4>Login</h4>
+                <form id="form" method="post">
+                    <input
+                        type="text"
+                        name="email"
+                        placeholder="E-mail"
+                        required=""
+                        class="form-control"
+                    /><br />
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Password"
+                        required=""
+                        class="form-control"
+                    /><br />
+                    <input
+                        type="submit"
+                        value="Login"
+                        class="btn btn-success mb-3"
+                    />
+                </form>
+                <div class="mssg bg-danger">
+                    <span id="check"></span>
+                </div>
+                <div id="LangTable"><a href="/profile" id="aa"></a></div>
+                <div>
+                    <span>Do you forgot password?</span
+                    ><a href="/forgetpass">Click here</a>
+                    <div>
+                        <span>Create a new Account?</span
+                        ><a href="/">Register here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
