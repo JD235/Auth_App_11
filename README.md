@@ -16,10 +16,10 @@ This app checks whether password matches correctly with the registered email or 
 Here are some screenshots of the web app:
 <br />
 Register Page
-<img src="register.png" alt="Chat app" width="600" height="600">
+<img src="register.png" alt="Chat app" width="600" height="400">
 Login Page
-<img src="login.png" alt="Chat app" width="600" height="600">
+<img src="login.png" alt="Chat app" width="600" height="400">
 Profile Data
-<img src="profile.png" alt="Chat app" width="600" height="600">
+<img src="profile.png" alt="Chat app" width="600" height="400">
 Forgot Password Page
-<img src="forgotpass.png" alt="Chat app" width="600" height="600">
+<img src="forgotpass.png" alt="Chat app" width="600" height="400">
