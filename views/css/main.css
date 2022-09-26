@@ -1,0 +1,29 @@
+.left-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left-side-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #023262;
+    border-radius: 10px;
+}
+body {
+    background-color: #f9ab55;
+    color: #023262;
+}
+.form-control {
+    border: 2px solid #023262;
+}
+.table {
+    background-color: rgba(240, 248, 255, 0.562);
+    border: 2px solid #023262;
+}
