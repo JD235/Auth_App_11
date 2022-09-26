@@ -12,3 +12,14 @@ Created a simple authentication app where user can do following things:
 <br />
 <br />
 This app checks whether password matches correctly with the registered email or password when new created.
+<br />
+Here are some screenshots of the web app:
+<br />
+Register Page
+<img src="register.png" alt="Chat app" width="300" height="300">
+Login Page
+<img src="login.png" alt="Chat app" width="300" height="300">
+Profile Data
+<img src="profile.png" alt="Chat app" width="300" height="300">
+Forgot Password Page
+<img src="forgotpass.png" alt="Chat app" width="300" height="300">
