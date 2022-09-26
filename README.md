@@ -1,6 +1,6 @@
 # Auth_App_11
 <br />
-Created a simple authentication app where user can do following things:
+Created a simple authentication app with NodeJS, EJS, MongoDB where user can do following things:
 <br />
 - Register
 <br />
